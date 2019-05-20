@@ -1,0 +1,36 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        var myWeakMap = new WeakMap();
+
+        setTimeout(function () {
+            myWeakMap.set(document.getElementById('div1'), 'Div 1');
+            myWeakMap.set(document.getElementById('div2'), 'Div 2');
+        })
+
+        function removeElemnt() {
+            document.getElementById('div1').remove();
+        }
+
+        function printMap() {
+            console.log(myWeakMap);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div style="display: flex;">
+        <div id="div1" style="height: 70px; width: 70px; background-color: red; margin: 5px;"></div>
+        <div id="div2" style="height: 70px; width: 70px; background-color: blue; margin: 5px;"></div>
+    </div>
+
+    <button onclick="removeElemnt()">Remove</button>
+    <button onclick="printMap()">Print Map</button>
+</body>
+
+</html>
