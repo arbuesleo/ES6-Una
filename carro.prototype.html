@@ -1,0 +1,41 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        
+        function Carro(modelo){
+            this.modelo = modelo;
+        }
+
+        Carro.prototype.andar = function(){
+            console.log("vrum... vrum...");
+        }
+
+        function Civic(modelo, chassi, qtdPortas){
+            Carro.call(this, modelo, chassi, qtdPortas);
+        }
+
+        Civic.prototype = Object.create(Carro.prototype);
+        Civic.prototype.constructor = Civic;
+
+        Civic.prototype.abrirTetoSolar = function(){
+            console.log("Abrindo Teto Solar...");
+        }
+
+        const myCivic = new Civic('Honda New Civic', 'SDAF5545ASDFASDFA', 4);
+
+        console.log(myCivic.modelo);
+
+        myCivic.andar();
+        myCivic.abrirTetoSolar();
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>

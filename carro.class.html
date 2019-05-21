@@ -1,0 +1,46 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        
+        class Carro{
+            
+            constructor(modelo, chassi, qtdPortas){
+                this.modelo = modelo;
+                this.chassi = chassi;
+                this.qtdPortas = qtdPortas;
+            }
+
+            andar(){
+                console.log('vrum... vrum...');
+            }
+        }
+
+        class Civic extends Carro{
+
+            constructor(modelo, chassi, qtdPortas){
+                super(modelo, chassi, qtdPortas);
+            }
+
+            abrirTetoSolar(){
+                console.log('abrindo teto solar...');
+            }
+        }
+
+        const myCivic = new Civic("Honda Civic", "BASDFA45545ASDFA54", 4);
+
+        console.log(myCivic.modelo);
+        myCivic.andar()
+        myCivic.abrirTetoSolar()
+        
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>
